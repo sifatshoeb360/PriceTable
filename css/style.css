@@ -1,0 +1,52 @@
+#price_table{
+    background: #5c539d;
+}
+.t_wraper{
+    background: #1f283b;
+    box-shadow: 0px 0px 7px 2px #0b0305;
+    margin: 20px 10px;
+}
+.t_wraper ul li{
+    margin-bottom: 15px;
+}
+.t_wraper ul li::before{
+    content: '\2022';
+    color: #e33058;
+    margin-right: 8px;
+    font-weight: bold;
+}
+
+.priceYear{
+   transform: translateX(-285px);
+   opacity: 0;
+   transition: 0.6s;
+}
+.t_head .priceMonth{
+    transform: translateX(41px);
+    display: block;
+    transition: 0.6s;
+}
+#toggler:checked ~ .col-md-6 .t_head .priceYear{
+    transform: translateX(-80px);
+    opacity: 1;
+} 
+
+#toggler:checked ~ .col-md-6 .t_head .priceMonth{
+    transform: translateX(230px);
+    opacity: 0;
+
+} 
+.toggler-label i{
+    font-size: 80px;
+    color: #1f283b;
+    font-weight: bold;
+}
+.toggler-label .close{
+    display: none;
+}
+#toggler:checked ~ .toggler-label .close{
+    display: block;
+}
+#toggler:checked ~ .toggler-label .open{
+    display: none;
+}
